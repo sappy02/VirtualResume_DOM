@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main_container">
+        <section id="section1">
+            <div class="box1_container">
+                <div class="box" id="box1">
+                    <img src="Images/C_Cornetti.jpeg" alt="Your Name" id="profile_image">
+                    <div class="name_title">
+                        <h1>CLAUD CORNETTI</h1>
+                        <h2>Software Engineer</h2>
+                    </div>
+                </div>
+                <div class="box" id="box2">
+                    <p><strong>Name:</strong> Claud Cornetti</p>
+                    <p><strong>Address:</strong> Edgewater, NJ 07020, US</p>
+                    <p><strong>Phone:</strong> +1-646-584-3179</p>
+                    <p><strong>Email:</strong> <a href="mailto:wpspacetemplates@gmail.com">wpspacetemplates@gmail.com</a></p>
+                    <p><strong>Website:</strong> <a href="http://themeforest.net/user/themerex">http://themeforest.net/user/themerex</a></p>
+                </div>
+            </div>
+            
+            <div class="box" id="box3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </section>
+
+        <section id="employment_education">
+            <div class="box" id="employment">
+                <h3>Employment</h3>
+                <p>Credentialed Finance Expert (Seasonal) Credentialed Finance Expert (Seasonal)| INTUIT TURBOTAX, Edgewater, NJ | 2020-23 
+                    <h4>- Expertly utilized tax software to prepare and review compliant and accurate income tax returns </h4>
+                    <h4>- Showed adaptability and problem-solving skills in investigating software issues and collaborating with cross-functional teams and explaining technical concepts clearly to clients</h4>
+                    <h4>- Strong communication resulting in top 10 percentile Net Promoter Score among 5,000+ tax experts</h4>
+                    <h4>- Created high-quality, factual content while meeting strict deadlines and adhering to company standards</h4>
+                    <h4>- Developed expertise in emerging technologies and human-AI interaction within the industry</h4>
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="box" id="education">
+                <h3>Education</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="box" id="programming_skills">
+                <h3>Programming Skills</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="box" id="language_skills">
+                <h3>Language Skills</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+        
+    </div>
+
+    <script>
+        // DOM Manipulation
+        document.getElementById('profile_image').addEventListener('click', function() {
+            this.src = 'Images/Another_Image.jpeg'; // Change to another image
+        });
+
+        document.getElementById('box2').addEventListener('mouseover', function() {
+            this.innerHTML = `
+                <p><strong>Name:</strong> Jefferson Sarah</p>
+                <p><strong>Date of birth:</strong> June 6, 1970</p>
+                <p><strong>Address:</strong> Updated Address, US</p>
+                <p><strong>Phone:</strong> +1-541-754-3010</p>
+                <p><strong>Email:</strong> <a href="mailto:updatedemail@gmail.com">updatedemail@gmail.com</a></p>
+                <p><strong>Website:</strong> <a href="http://updatedwebsite.com">http://updatedwebsite.com</a></p>
+            `;
+        });
+
+        const newSection = document.createElement('section');
+        newSection.id = 'new_section';
+        newSection.innerHTML = `
+            <div class="box">
+                <h3>New Section</h3>
+                <p>This is a dynamically added section.</p>
+            </div>
+        `;
+        document.querySelector('.main_container').appendChild(newSection);
+
+        // BOM Manipulation
+        window.onload = function() {
+            alert('Welcome to my digital resume!');
+        };
+
+        document.getElementById('box3').addEventListener('click', function() {
+            window.location.href = 'https://www.example.com';
+        });
+
+        console.log('Browser Information:', navigator.userAgent);
+    </script>
+</body>
+</html>
